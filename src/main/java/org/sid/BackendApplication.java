@@ -24,13 +24,13 @@ public class BackendApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        /*villeRsp.save(new Ville(null,1L,"Adrar",null));
+        villeRsp.save(new Ville(null,1L,"Adrar",null));
         villeRsp.save(new Ville(null,2L,"Chlef",null));
         villeRsp.save(new Ville(null,3L,"Laghouat",null));
         villeRsp.save(new Ville(null,4L,"Oum El Bouaghi",null));
         villeRsp.save(new Ville(null,5L,"Batna",null));
         villeRsp.save(new Ville(null,6L,"Béjaïa",null));
         villeRsp.save(new Ville(null,7L,"Biskra",null));
-        villeRsp.save(new Ville(null,8L,"Béchar",null));*/
+        villeRsp.save(new Ville(null,8L,"Béchar",null));
     }
 }
