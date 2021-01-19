@@ -1,6 +1,10 @@
 package org.sid;
 
+import org.sid.dao.AdminRepository;
+import org.sid.dao.CompteRepository;
 import org.sid.dao.VilleRepository;
+import org.sid.entities.Admin;
+import org.sid.entities.Compte;
 import org.sid.entities.Ville;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,6 +17,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class BackendApplication implements CommandLineRunner {
     @Autowired
     VilleRepository villeRsp;
+    @Autowired
+    BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired
+    AdminRepository adminRepository;
+    @Autowired
+    CompteRepository compteRepository;
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
     }
@@ -24,13 +34,18 @@ public class BackendApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        villeRsp.save(new Ville(null,1L,"Adrar",null));
+        Compte cc=new Compte(null,"admin",bCryptPasswordEncoder.encode("1234"),
+                "","0557882216","ADMIN");
+        compteRepository.save(cc);
+        Admin admin=new Admin(null,"Malki","Tarek",cc);
+        adminRepository.save(admin);
+        /*villeRsp.save(new Ville(null,1L,"Adrar",null));
         villeRsp.save(new Ville(null,2L,"Chlef",null));
         villeRsp.save(new Ville(null,3L,"Laghouat",null));
         villeRsp.save(new Ville(null,4L,"Oum El Bouaghi",null));
         villeRsp.save(new Ville(null,5L,"Batna",null));
         villeRsp.save(new Ville(null,6L,"Béjaïa",null));
         villeRsp.save(new Ville(null,7L,"Biskra",null));
-        villeRsp.save(new Ville(null,8L,"Béchar",null));
+        villeRsp.save(new Ville(null,8L,"Béchar",null));*/
     }
 }
