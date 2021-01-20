@@ -47,7 +47,7 @@ public class BackendApplication implements CommandLineRunner {
         villeRsp.save(new Ville(null,5L,"Batna",null));
         villeRsp.save(new Ville(null,6L,"Béjaïa",null));
         villeRsp.save(new Ville(null,7L,"Biskra",null));
-        villeRsp.save(new Ville(null,8L,"Béchar",null));
+        villeRsp.save(new Ville(null,8L,"Béchar",null));*/
 
         villeRsp.save(new Ville(null,9L,"Blida",null));
         villeRsp.save(new Ville(null,10L,"Bouira",null));
@@ -90,8 +90,8 @@ public class BackendApplication implements CommandLineRunner {
         villeRsp.save(new Ville(null,45L,"Naâma",null));
         villeRsp.save(new Ville(null,46L,"Ain Témouchent",null));
         villeRsp.save(new Ville(null,47L,"Ghardaia",null));
-        villeRsp.save(new Ville(null,48L,"Relizane",null));*/
-       villeRsp.deleteById(1L);
+        villeRsp.save(new Ville(null,48L,"Relizane",null));
+
 
     }
 }
