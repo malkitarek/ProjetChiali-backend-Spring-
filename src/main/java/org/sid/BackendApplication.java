@@ -89,8 +89,9 @@ public class BackendApplication implements CommandLineRunner {
         villeRsp.save(new Ville(null,45L,"Naâma",null));
         villeRsp.save(new Ville(null,46L,"Ain Témouchent",null));
         villeRsp.save(new Ville(null,47L,"Ghardaia",null));
-        villeRsp.save(new Ville(null,48L,"Relizane",null));*/
-        villeRsp.save(new Ville(null,49L,"El M'Ghair",null));
+        villeRsp.save(new Ville(null,48L,"Relizane",null));
+        villeRsp.save(new Ville(null,49L,"El M'Ghair",null));*/
+        villeRsp.save(new Ville(null,50L,"El M'Ghair",null));
 
     }
 }
