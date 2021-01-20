@@ -92,6 +92,7 @@ public class BackendApplication implements CommandLineRunner {
         villeRsp.save(new Ville(null,47L,"Ghardaia",null));
         villeRsp.save(new Ville(null,48L,"Relizane",null));*/
         villeRsp.deleteById(50L);
+        villeRsp.deleteById(51L);
 
 
     }
