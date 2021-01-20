@@ -35,7 +35,7 @@ public class BackendApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        /* Compte cc=new Compte(null,"admin",bCryptPasswordEncoder.encode("1234"),
+         Compte cc=new Compte(null,"admin",bCryptPasswordEncoder.encode("1234"),
                 "","0557882216","ADMIN");
         compteRepository.save(cc);
         Admin admin=new Admin(null,"Malki","Tarek",cc);
@@ -90,8 +90,8 @@ public class BackendApplication implements CommandLineRunner {
         villeRsp.save(new Ville(null,45L,"Naâma",null));
         villeRsp.save(new Ville(null,46L,"Ain Témouchent",null));
         villeRsp.save(new Ville(null,47L,"Ghardaia",null));
-        villeRsp.save(new Ville(null,48L,"Relizane",null));*/
-        villeRsp.save(new Ville(null,49L,"El M'Ghair",null));
+        villeRsp.save(new Ville(null,48L,"Relizane",null));
+       // villeRsp.save(new Ville(null,49L,"El M'Ghair",null));
 
     }
 }
