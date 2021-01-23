@@ -130,6 +130,31 @@ public class RestAppController {
         return villeRepository.findAll();
     }
 
+    @GetMapping("/plombier/{username}/{idPlo}")
+    public boolean ser(@PathVariable("username") String username, @PathVariable("idPlo") Long idPlo) {
+
+        if (idPlo != -1) {
+            Plombier plombier = plombierRepository.findById(idPlo).get();
+            Compte user = compteRepository.findById(plombier.getCompte().getId()).get();
+
+            if (!user.getUsername().equals(username)) {
+                Compte u = compteRepository.findByUsername(username);
+                if (u != null) {
+                    return true;
+                }
+            }
+
+            return false;
+        } else {
+            Compte u = compteRepository.findByUsername(username);
+            if (u != null) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     /**********************gestion erreur*****************************/
     @GetMapping("/erreurs")
     public  Collection<Erreur> getErreurs(){
