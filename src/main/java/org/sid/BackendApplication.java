@@ -34,7 +34,7 @@ public class BackendApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(compteRepository.findByUsername("admin").getUsername());
+        //System.out.println(compteRepository.findByUsername("admin").getUsername());
         /*Compte cc=new Compte(null,"admin",bCryptPasswordEncoder.encode("1234"),
                 "","0557882216","ADMIN");
         compteRepository.save(cc);
